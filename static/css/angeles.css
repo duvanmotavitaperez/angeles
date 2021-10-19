@@ -104,11 +104,6 @@ body {
                 letter-spacing: 1px;
                 color: #F7901E;
             }
-            @media screen and (min-width: 873px){ 
-                menu ul{
-                    transform: translateX(0);    
-                }
-            }
             @media screen and (max-width: 872px){
                 menu ul{
                     position: fixed;
@@ -116,7 +111,7 @@ body {
                     right: 0;
                     background-color: #00000080;
                     transform: translateX(15rem);
-                    
+
                 }
                 menu ul li{
                     text-align: end;
@@ -139,7 +134,6 @@ body {
                     color: #fff;
                 }
             }
-            
     .container-fixed {
         background-color: var(--transparent-color);
         margin-top: 10rem;

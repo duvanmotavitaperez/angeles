@@ -43,18 +43,13 @@ window.onload = () => {
             }() 
       moveIcon = moveIcon ? false : true
    })
-   $ul.addEventListener('blur', () => {
-      alert('test')
-             let coun = .1
-             let timeRight = setInterval(()=> {
-                                 $ul.style.transform = `translate(${coun}rem)`
-                                 coun += .2
-                                 if(coun >= 14.9){
-                                    clearInterval(timeRight)
-                                    coun = 14.9
-                                 }
-                              }, 1) 
-            })
+   
+   window.addEventListener('resize', () => {
+         console.log($ul.getBoundingClientRect().x) 
+         if($ul.getBoundingClientRect().x >= 719.0843505859375) {
+            
+         }  
+   })
    const oneBound = $itemMove0.getBoundingClientRect().x
 
    let count = 0
