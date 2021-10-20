@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/normalize.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/admin.css')}}">
+    <script src="{{url_for('static', filename='js/admin.js')}}"></script>
     <title>Document</title>
 </head>
 <body>
-    <p>please enter your credentials to see a preview of the page.</p>
-    <form action="{{url_for('angeles')}}", method="POST">
-        <input type="text" name="user">
-        <input type="password" name="userpass" id="">
-        <input type="submit" value="Enviar">
-    </form>
+    <main>
+        <div class="main-container">
+            <form id="formdata" method="post">
+                <textarea class='input-item' name="username" id="username" cols="1" rows="1" placeholder="Nombre del usuario"></textarea>
+                <input class='input-item password' type="password" name="userpass" id="" placeholder="Contraseña">
+                <input class='input-item button' id='button' type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
 </body>
 </html>
