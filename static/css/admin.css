@@ -34,11 +34,14 @@ main {
         form {
             display: flex;
             flex-direction: column;
-            gap: 20PX;
+            align-items: center;
+            gap: 15PX;
         }
             .content-input {
                 padding-bottom: .5rem;
                 border-bottom: 1px solid #ffffff;
+                width: 100%;
+                margin: 10px;
                 display: flex;
             }
                 .input-item::placeholder{
@@ -107,7 +110,7 @@ main {
                     vertical-align: center;
                     color: #fff;
                     font-size: 1.5rem;
-                    margin-top: 1 em;
+                    margin-top: 1em;
                 }
                 .contain-button span {
                     padding: 0.3em 0.35em;
@@ -129,18 +132,29 @@ main {
                 text-align: center;
                 vertical-align: middle;           
                 color: rgb(255, 0, 0);
+                width: 90%;
                 font-weight: lighter;
                 height: 50px;
-                background-color: #00000033;
+                border-radius: 5%;
+                background-color: rgba(68, 68, 68, 0.404);
+                position: relative;
+                margin-bottom: 8px;
             }
             .alert::after {
-                content: 'TEST';
-                display: inline-block; 
+                position: absolute;
+                border-top: 15px solid rgba(68, 68, 68, 0.404);;
+                border-right: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+                border-left: 15px solid transparent;
+                bottom: -30px;
+                left: calc(50% - 15px);
+                content: '';   
             }
-            .alert::before {
-                content: 'TEST1';  
+            .alert.hidden {
+                visibility: hidden;
             }
-.credit {
+            
+.ctransparentit {
     position: fixed;
     left: 10px;
     bottom: 10px;

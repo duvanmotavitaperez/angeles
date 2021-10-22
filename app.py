@@ -21,9 +21,8 @@ def angeles():
         sess.set_cookie('sesskey', )
         return sess
     else:
-        if user == request.form['user']:
-            return render_template('angeles.html')
-        return render_template('admin.html')
+        print('call catched')
+        return 'tolo pala ti tolo'
 
 @app.errorhandler(404)
 def error404(e):
