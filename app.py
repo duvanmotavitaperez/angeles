@@ -22,7 +22,7 @@ def angeles():
         return sess
     else:
         print('call catched')
-        return 'tolo pala ti tolo'
+        return 'This is a test for fetch'
 
 @app.errorhandler(404)
 def error404(e):
