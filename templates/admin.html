@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google" content="notranslate">
+    <script src="https://kit.fontawesome.com/8643eda158.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{url_for('static', filename='css/normalize.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/admin.css')}}">
     <script src="{{url_for('static', filename='js/admin.js')}}"></script>
@@ -14,11 +15,23 @@
     <main>
         <div class="main-container">
             <form id="formdata" method="post">
-                <textarea class='input-item' name="username" id="username" cols="1" rows="1" placeholder="Nombre del usuario"></textarea>
-                <input class='input-item password' type="password" name="userpass" id="" placeholder="Contraseña">
-                <input class='input-item button' id='button' type="submit" value="Enviar">
+                <p class="alert hidden">Por favor completa todos los campos</p>
+                <div class="content-input">
+                    <textarea class='input-item' name="username" id="username" cols="1" rows="1" placeholder="Nombre del usuario" spellcheck="false"></textarea>
+                </div>
+                <div class="content-input">
+                    <input class='input-item password' type="password" name="userpass" placeholder="Contraseña">
+                    <span class="unmask-eye show-text" id="showText" style="display: inline-block;"></span>
+                </div>   
+                <div class="contain-button">
+                    <span class="button-send">
+                        <i class="send fa fa-paper-plane" aria-hidden="true"></i>
+                    </span>
+                </div>       
+                
             </form>
         </div>
     </main>
+    <p class="credit">Designed by @Duván</p>
 </body>
 </html>
